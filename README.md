@@ -43,12 +43,6 @@ The protoc compiler must be installed for this plugin
 
 ### Update the Go module name
 
-Replace `github.com/pact-foundation/pact-plugin-template-golang` in [`go.mod`](./go.mod) with your github URL (without the protocol prefix) to identify the package uniquely.
-
-Similarly, correct the import at the top of [`plugin.go`](./plugin.go) and [`server.go`](./server.go).
-
-Or simply do a workspace wide search and replace from `github.com/pact-foundation/pact-plugin-template-golang` to your go module name.
-
 Run:
 
 ```

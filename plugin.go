@@ -8,7 +8,7 @@ import (
 	"log"
 
 	"github.com/google/uuid"
-	plugin "github.com/pact-foundation/pact-plugin-template-golang/io_pact_plugin"
+	plugin "github.com/austek/pact-foobar-plugin/io_pact_plugin"
 	"google.golang.org/protobuf/types/known/emptypb"
 	"google.golang.org/protobuf/types/known/wrapperspb"
 )
@@ -44,15 +44,11 @@ func (m *pluginServer) InitPlugin(ctx context.Context, req *plugin.InitPluginReq
 	return &plugin.InitPluginResponse{
 		Catalogue: []*plugin.CatalogueEntry{
 			{
-				Key:  "PROJECT NAME",                        // TODO: changeme!
-				Type: plugin.CatalogueEntry_CONTENT_MATCHER, // TODO: changeme!
+				Key:  "foobarplugin",
+				Type: plugin.CatalogueEntry_CONTENT_MATCHER,
 				Values: map[string]string{
 					"content-types": CONTENT_TYPE,
 				},
-			},
-			{
-				Key:  "TRANSPORT NAME", // TODO: changeme!
-				Type: plugin.CatalogueEntry_TRANSPORT,
 			},
 		},
 	}, nil
